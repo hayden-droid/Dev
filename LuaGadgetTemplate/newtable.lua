@@ -1,0 +1,3 @@
+newtab = {}
+
+print(newtab)

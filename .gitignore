@@ -1,0 +1,31 @@
+# bytecode files
+bcfiles/
+*.bc
+
+# binary file
+bin/
+
+# object files
+obj/
+
+# visual studio files
+.vs/
+
+# object files
+*.o
+
+# result temp files
+*.result
+test_result/
+
+# luac.out 
+luac.out
+
+# python tmp files
+*.pyc
+
+# vim swap files
+*.swp
+
+# mac osx tmp files
+.DS_Store
