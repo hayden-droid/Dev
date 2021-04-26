@@ -29,3 +29,9 @@ luac.out
 
 # mac osx tmp files
 .DS_Store
+
+# some tmp files
+GadgetGenerator/GadgetGenerator
+GodLuaDeobfuscate/GodLuaDeobfuscate
+LuaGadgetTemplate/loadkx.lua
+LuaHunt/loader

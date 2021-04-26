@@ -51,6 +51,9 @@ def ProcessResult(result, fileName):
         elif fileName == 'newtable.lua':
             if 'table:' in curResult:
                 return curOpCode
+        elif fileName == 'tforcall.lua':
+            if 'Lua Hunt' in curResult:
+                return curOpCode
         else:
             if curResult == compare_result[fileName]:
                 return curOpCode
