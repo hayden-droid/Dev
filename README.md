@@ -51,6 +51,32 @@ Only the executable code of the interpreter is statically visible, posing a huge
 
 **Benchmark**: The benchmark for correctness evaluation.
 
+## Quick Start
+### Docker
+We built the pre-compiled version of Luahunt as a docker image based on Ubuntu 20.04 and published it to the Docker Hub.
+
+To use the `LuaHunt` you should firstly pull the image from Docker Hub:
+```
+$ docker pull luahunt/luahunt
+```
+
+After the pull is complete, you can start an instance of it:
+```
+$ docker run -it luahunt/luahunt '/bin/bash'
+```
+
+The location of `LuaHunt` in the docker image is `/root/Dev`, so we first switch to the docker directory:
+```
+# cd /root/Dev
+```
+
+The binary files in this directory are all pre-compiled, so we only need to use the Python script `LuaHunt/luahunt.py` to test the obfuscated Lua interpreter. 
+
+For example, we can use the pre-written `test_godlua.sh` script to call the LuaHunt/luahunt.py script to test `GodLua`:
+```
+# ./test_godlua.sh
+```
+
 ## Requirements
 
 Operating System: Ubuntu 20.04 LTS,
@@ -72,7 +98,7 @@ IDA-Python
 Just run "make" in the root directory of LuaHunt:
 
 ```
-make
+$ make
 ```
 
 This will build the whole LuaHunt project, and the binaries will be in the "bin" directory.
@@ -80,13 +106,13 @@ This will build the whole LuaHunt project, and the binaries will be in the "bin"
 If you just want to build the Gadget Generator:
 
 ```
-cd GadgetGenerator && make
+$ cd GadgetGenerator && make
 ```
 
 If you just want to build the deobfuscator of GodLua:
 
 ```
-cd GodLuaObfuscate && make
+$ cd GodLuaObfuscate && make
 ```
 
 In the normal conditions, you just need to run "make" in the LuaHunt root directory, and you will get the executable LuaHunt.
@@ -98,8 +124,8 @@ After building the LuaHunt, we can use it to test customized interpreters.
 You can use LuaHunt/luahunt.py to do the entire LuaHunt test:
 
 ```
-cd LuaHunt
-python luahunt.py GadgetGenerator Interpreter [-v]
+$ cd LuaHunt
+$ python luahunt.py GadgetGenerator Interpreter [-v]
 ```
 
 The LuaHunt will do the whole test automatically.
@@ -111,14 +137,14 @@ If you need the verbose information of the LuaHunt test (testing time and testin
 For example, if you want to analyze the customized Lua interpreter of GodLua, you can run LuaHunt test like this:
 
 ```
-cd LuaHunt
-python luahunt.py ../bin/GadgetGenerator ../bin/godlua_interpreter.bin
+$ cd LuaHunt
+$ python luahunt.py ../bin/GadgetGenerator ../bin/godlua_interpreter.bin
 ```
 
 If you want to use GodLua Deobfuscator to deobfuscate the malicious bytecode of GodLua, just use:
 
 ```
-./bin/GodLuaDeobfuscate -deob BytecodeFileName
+$ ./bin/GodLuaDeobfuscate -deob BytecodeFileName
 ```
 
 If you don't add the "-deob" option, it will be a modified Lua compiler that can compile Lua script into bytecode that can be executed by GodLua's customized Lua interpreter.
