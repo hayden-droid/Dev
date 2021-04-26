@@ -148,7 +148,7 @@ $ ./bin/GodLuaDeobfuscate -deob BytecodeFileName
 
 If you don't add the "-deob" option, it will be a modified Lua compiler that can compile Lua script into bytecode that can be executed by GodLua's customized Lua interpreter.
 
-### Running Example
+## Running Example
 
 Here is an example of using LuaHunt to test GodLua5.
 
