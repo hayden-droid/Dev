@@ -51,8 +51,7 @@ Only the executable code of the interpreter is statically visible, posing a huge
 
 **Benchmark**: The benchmark for correctness evaluation.
 
-## Quick Start
-### Using Docker
+## Quick Start: Using Docker
 We built the pre-compiled version of Luahunt as a docker image based on Ubuntu 20.04 and published it to the Docker Hub.
 
 To use the `LuaHunt` you should firstly pull the image from Docker Hub:
@@ -76,8 +75,8 @@ For example, we can use the pre-written `test_godlua.sh` script to call the LuaH
 ```
 # ./test_godlua.sh
 ```
-
-## Requirements
+## Build From Source
+### Requirements
 
 Operating System: Ubuntu 20.04 LTS,
 
@@ -93,7 +92,7 @@ IDA Pro 7.0,
 
 IDA-Python
 
-## Build
+### Build
 
 Just run "make" in the root directory of LuaHunt:
 
@@ -117,7 +116,7 @@ $ cd GodLuaObfuscate && make
 
 In the normal conditions, you just need to run "make" in the LuaHunt root directory, and you will get the executable LuaHunt.
 
-## Usage
+### Usage
 
 After building the LuaHunt, we can use it to test customized interpreters.
 
@@ -149,7 +148,7 @@ $ ./bin/GodLuaDeobfuscate -deob BytecodeFileName
 
 If you don't add the "-deob" option, it will be a modified Lua compiler that can compile Lua script into bytecode that can be executed by GodLua's customized Lua interpreter.
 
-## Running Example
+### Running Example
 
 Here is an example of using LuaHunt to test GodLua5.
 
