@@ -273,7 +273,7 @@ def TestInterpreter(gadget_gen, interpreter):
     print 'LuaHunt testing finished! Total time consuming: ' + str(totalTime)
 
     print 'OpCode sequence of ' + interpreter +': '
-    print known_opcodes
+    print json.dumps(known_opcodes)
 
     return totalTime
 
