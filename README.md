@@ -52,7 +52,7 @@ Only the executable code of the interpreter is statically visible, posing a huge
 **Benchmark**: The benchmark for correctness evaluation.
 
 ## Quick Start
-### Docker
+### Using Docker
 We built the pre-compiled version of Luahunt as a docker image based on Ubuntu 20.04 and published it to the Docker Hub.
 
 To use the `LuaHunt` you should firstly pull the image from Docker Hub:
